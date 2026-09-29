@@ -12,6 +12,8 @@ The main result is architectural rather than leaderboard-oriented: **facts the r
 
 This benchmark series was developed collaboratively by **Zerrius and ChatGPT**. Zerrius directed the research, ran the local experiments, and made the architecture decisions. ChatGPT assisted with experiment design, analysis, failure interpretation, documentation, and synthesis. Other coding agents were used during implementation where appropriate; the benchmark record preserves the evidence rather than attributing correctness to any one model.
 
+The collaboration and responsibility model is documented in [`docs/COLLABORATION.md`](docs/COLLABORATION.md).
+
 ## Research question
 
 Can stock Laya serve as a useful local decision component before fine-tuning, and if so, what role should it occupy in a larger agent system?
@@ -63,11 +65,14 @@ See [`methodology/EVIDENCE_AND_METRICS.md`](methodology/EVIDENCE_AND_METRICS.md)
 ```text
 laya-decision-benchmark/
 ├── README.md
+├── LICENSE
 ├── LICENSES.md
+├── LICENSE-CODE
+├── LICENSE-CONTENT
 ├── report/
 ├── benchmarks/        # added after public-data audit
 ├── runners/           # added after code/privacy audit
-├── results/           # added after result/privacy audit
+├── results/
 ├── hashes/
 ├── methodology/
 ├── invalidated/
@@ -78,9 +83,13 @@ laya-decision-benchmark/
 
 The public research synthesis is available at [`report/LAYA_BENCHMARK_REPORT_V1.md`](report/LAYA_BENCHMARK_REPORT_V1.md).
 
+The aggregate run index is available at [`results/BENCHMARK_SUMMARY.md`](results/BENCHMARK_SUMMARY.md).
+
 ## Reproducibility
 
 For frozen holdouts, benchmark and runner SHA-256 values were captured before inference. The canonical experiment log records benchmark versions, corrections, invalidated runs, major interpretation changes, and the transition from synthetic testing to live shadow observation.
+
+Published provenance values are collected in [`hashes/KNOWN_HASHES.md`](hashes/KNOWN_HASHES.md).
 
 Raw cases, runners, result files, and live-shadow inputs are being copied into a separate public staging area and audited before they are added here. The canonical local experiment artifacts are not being rewritten in place.
 
@@ -88,8 +97,8 @@ Raw cases, runners, result files, and live-shadow inputs are being copied into a
 
 This repository uses split licensing by artifact type. See [`LICENSES.md`](LICENSES.md).
 
-- Code and experiment runners: **Apache-2.0**.
-- Benchmark data, documentation, reports, and figures: **CC BY 4.0**, unless otherwise noted.
+- Code and experiment runners: **Apache-2.0**. The root `LICENSE` contains the Apache 2.0 terms.
+- Benchmark data, documentation, reports, and figures: **CC BY 4.0**, unless otherwise noted. See `LICENSE-CONTENT`.
 
 ## Current status
 
